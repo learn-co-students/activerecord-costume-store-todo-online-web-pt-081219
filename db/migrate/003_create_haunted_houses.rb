@@ -2,18 +2,20 @@
 
 
 
-# class HauntedHouses
+class CreateHauntedHouses < ActiveRecord::Migration[4.2]
 
-#         haunted_houses do |c|
-#         t.name
-#         t.location
-#         t.theme
-#         t.price
-#         t.whether they're family friendly or not
-#         t.opening date
-#         t.closing date
-#         t.long description
-#     end
-    
-# end
+    def change
+        create_table :haunted_houses do |t|
+            t.string :name
+            t.string :location
+            t.string :theme
+            t.integer :price
+            t.boolean :family_friendly
+            t.string :opening_date
+            t.string :closing_date
+            t.string :description
+        end
+    end
+
+end
 
